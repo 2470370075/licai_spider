@@ -1,0 +1,469 @@
+2020-06-09 22:56:05 [scrapy.utils.log] INFO: Scrapy 1.6.0 started (bot: dongfang)
+2020-06-09 22:56:05 [scrapy.utils.log] INFO: Versions: lxml 4.3.3.0, libxml2 2.9.5, cssselect 1.0.3, parsel 1.5.1, w3lib 1.20.0, Twisted 19.2.0, Python 3.6.6 (v3.6.6:4cf1f54eb7, Jun 27 2018, 03:37:03) [MSC v.1900 64 bit (AMD64)], pyOpenSSL 19.0.0 (OpenSSL 1.1.0i  14 Aug 2018), cryptography 2.3.1, Platform Windows-7-6.1.7601-SP1
+2020-06-09 22:56:05 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'dongfang', 'LOG_ENCODING': 'UTF-8', 'LOG_FILE': 'TEST1.LOG', 'LOG_LEVEL': 'INFO', 'NEWSPIDER_MODULE': 'dongfang.spiders', 'SPIDER_MODULES': ['dongfang.spiders']}
+2020-06-09 22:56:05 [scrapy.extensions.telnet] INFO: Telnet Password: 29d2e81d1745c810
+2020-06-09 22:56:05 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2020-06-09 22:56:05 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2020-06-09 22:56:05 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2020-06-09 22:56:05 [scrapy.middleware] INFO: Enabled item pipelines:
+[]
+2020-06-09 22:56:05 [scrapy.core.engine] INFO: Spider opened
+2020-06-09 22:56:05 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2020-06-09 22:56:05 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2020-06-09 22:56:07 [scrapy.core.scraper] ERROR: Spider error processing <GET http://f10.eastmoney.com/ShareholderResearch/ShareholderResearchAjax?code=SH600329> (referer: http://push2.eastmoney.com/api/qt/stock/get?ut=fa5fd1943c7b386f172d6893dbfba10b&invt=2&fltt=2&fields=f43,f57,f58,f169,f170,f46,f44,f51,f168,f47,f164,f163,f116,f60,f45,f52,f50,f48,f167,f117,f71,f161,f49,f530,f135,f136,f137,f138,f139,f141,f142,f144,f145,f147,f148,f140,f143,f146,f149,f55,f62,f162,f92,f173,f104,f105,f84,f85,f183,f184,f185,f186,f187,f188,f189,f190,f191,f192,f107,f111,f86,f177,f78,f110,f262,f263,f264,f267,f268,f250,f251,f252,f253,f254,f255,f256,f257,f258,f266,f269,f270,f271,f273,f274,f275,f127,f199,f128,f193,f196,f194,f195,f197,f80,f280,f281,f282,f284,f285,f286,f287&secid=1.600329&cb=jQuery112405506785612361488_1589457232614&_=1589457232640)
+Traceback (most recent call last):
+  File "D:\1\lib\site-packages\scrapy\utils\defer.py", line 102, in iter_errback
+    yield next(it)
+  File "D:\1\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "D:\1\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "D:\1\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "D:\1\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "E:\理财网\dongfang\dongfang\spiders\cdongfang.py", line 264, in gudong_parse
+    self.gupiao_name = gupiao_list.pop()
+IndexError: pop from empty list
+2020-06-09 22:56:07 [scrapy.core.engine] INFO: Closing spider (finished)
+2020-06-09 22:56:07 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 6347,
+ 'downloader/request_count': 11,
+ 'downloader/request_method_count/GET': 11,
+ 'downloader/response_bytes': 46402,
+ 'downloader/response_count': 11,
+ 'downloader/response_status_count/200': 11,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2020, 6, 9, 14, 56, 7, 718426),
+ 'log_count/ERROR': 1,
+ 'log_count/INFO': 9,
+ 'request_depth_max': 10,
+ 'response_received_count': 11,
+ 'scheduler/dequeued': 11,
+ 'scheduler/dequeued/memory': 11,
+ 'scheduler/enqueued': 11,
+ 'scheduler/enqueued/memory': 11,
+ 'spider_exceptions/IndexError': 1,
+ 'start_time': datetime.datetime(2020, 6, 9, 14, 56, 5, 458423)}
+2020-06-09 22:56:07 [scrapy.core.engine] INFO: Spider closed (finished)
+2020-06-10 20:43:51 [scrapy.utils.log] INFO: Scrapy 1.6.0 started (bot: dongfang)
+2020-06-10 20:43:51 [scrapy.utils.log] INFO: Versions: lxml 4.3.3.0, libxml2 2.9.5, cssselect 1.0.3, parsel 1.5.1, w3lib 1.20.0, Twisted 19.2.0, Python 3.6.6 (v3.6.6:4cf1f54eb7, Jun 27 2018, 03:37:03) [MSC v.1900 64 bit (AMD64)], pyOpenSSL 19.0.0 (OpenSSL 1.1.0i  14 Aug 2018), cryptography 2.3.1, Platform Windows-7-6.1.7601-SP1
+2020-06-10 20:43:51 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'dongfang', 'LOG_ENCODING': 'UTF-8', 'LOG_FILE': 'TEST1.LOG', 'LOG_LEVEL': 'INFO', 'NEWSPIDER_MODULE': 'dongfang.spiders', 'SPIDER_MODULES': ['dongfang.spiders']}
+2020-06-10 20:43:52 [scrapy.extensions.telnet] INFO: Telnet Password: 671430d579bf5b3f
+2020-06-10 20:43:52 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2020-06-10 20:43:52 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2020-06-10 20:43:52 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2020-06-10 20:43:52 [scrapy.middleware] INFO: Enabled item pipelines:
+[]
+2020-06-10 20:43:52 [scrapy.core.engine] INFO: Spider opened
+2020-06-10 20:43:53 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2020-06-10 20:43:53 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2020-06-10 20:43:57 [scrapy.core.scraper] ERROR: Spider error processing <GET http://f10.eastmoney.com/ShareholderResearch/ShareholderResearchAjax?code=SH600329> (referer: http://push2.eastmoney.com/api/qt/stock/get?ut=fa5fd1943c7b386f172d6893dbfba10b&invt=2&fltt=2&fields=f43,f57,f58,f169,f170,f46,f44,f51,f168,f47,f164,f163,f116,f60,f45,f52,f50,f48,f167,f117,f71,f161,f49,f530,f135,f136,f137,f138,f139,f141,f142,f144,f145,f147,f148,f140,f143,f146,f149,f55,f62,f162,f92,f173,f104,f105,f84,f85,f183,f184,f185,f186,f187,f188,f189,f190,f191,f192,f107,f111,f86,f177,f78,f110,f262,f263,f264,f267,f268,f250,f251,f252,f253,f254,f255,f256,f257,f258,f266,f269,f270,f271,f273,f274,f275,f127,f199,f128,f193,f196,f194,f195,f197,f80,f280,f281,f282,f284,f285,f286,f287&secid=1.600329&cb=jQuery112405506785612361488_1589457232614&_=1589457232640)
+Traceback (most recent call last):
+  File "D:\1\lib\site-packages\scrapy\utils\defer.py", line 102, in iter_errback
+    yield next(it)
+  File "D:\1\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "D:\1\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "D:\1\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "D:\1\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "E:\理财网\dongfang\dongfang\spiders\cdongfang.py", line 270, in gudong_parse
+    self.gupiao_name = gupiao_list.pop()
+IndexError: pop from empty list
+2020-06-10 20:43:57 [scrapy.core.engine] INFO: Closing spider (finished)
+2020-06-10 20:43:57 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 6347,
+ 'downloader/request_count': 11,
+ 'downloader/request_method_count/GET': 11,
+ 'downloader/response_bytes': 115521,
+ 'downloader/response_count': 11,
+ 'downloader/response_status_count/200': 11,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2020, 6, 10, 12, 43, 57, 682755),
+ 'log_count/ERROR': 1,
+ 'log_count/INFO': 9,
+ 'request_depth_max': 10,
+ 'response_received_count': 11,
+ 'scheduler/dequeued': 11,
+ 'scheduler/dequeued/memory': 11,
+ 'scheduler/enqueued': 11,
+ 'scheduler/enqueued/memory': 11,
+ 'spider_exceptions/IndexError': 1,
+ 'start_time': datetime.datetime(2020, 6, 10, 12, 43, 53, 18347)}
+2020-06-10 20:43:57 [scrapy.core.engine] INFO: Spider closed (finished)
+2020-06-10 20:46:20 [scrapy.utils.log] INFO: Scrapy 1.6.0 started (bot: dongfang)
+2020-06-10 20:46:20 [scrapy.utils.log] INFO: Versions: lxml 4.3.3.0, libxml2 2.9.5, cssselect 1.0.3, parsel 1.5.1, w3lib 1.20.0, Twisted 19.2.0, Python 3.6.6 (v3.6.6:4cf1f54eb7, Jun 27 2018, 03:37:03) [MSC v.1900 64 bit (AMD64)], pyOpenSSL 19.0.0 (OpenSSL 1.1.0i  14 Aug 2018), cryptography 2.3.1, Platform Windows-7-6.1.7601-SP1
+2020-06-10 20:46:20 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'dongfang', 'LOG_ENCODING': 'UTF-8', 'LOG_FILE': 'TEST1.LOG', 'LOG_LEVEL': 'INFO', 'NEWSPIDER_MODULE': 'dongfang.spiders', 'SPIDER_MODULES': ['dongfang.spiders']}
+2020-06-10 20:46:20 [scrapy.extensions.telnet] INFO: Telnet Password: d815ff2eff7fa44d
+2020-06-10 20:46:20 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2020-06-10 20:46:20 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2020-06-10 20:46:20 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2020-06-10 20:46:20 [scrapy.middleware] INFO: Enabled item pipelines:
+[]
+2020-06-10 20:46:20 [scrapy.core.engine] INFO: Spider opened
+2020-06-10 20:46:20 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2020-06-10 20:46:20 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2020-06-10 20:46:24 [scrapy.core.scraper] ERROR: Spider error processing <GET http://f10.eastmoney.com/ShareholderResearch/ShareholderResearchAjax?code=SH600329> (referer: http://push2.eastmoney.com/api/qt/stock/get?ut=fa5fd1943c7b386f172d6893dbfba10b&invt=2&fltt=2&fields=f43,f57,f58,f169,f170,f46,f44,f51,f168,f47,f164,f163,f116,f60,f45,f52,f50,f48,f167,f117,f71,f161,f49,f530,f135,f136,f137,f138,f139,f141,f142,f144,f145,f147,f148,f140,f143,f146,f149,f55,f62,f162,f92,f173,f104,f105,f84,f85,f183,f184,f185,f186,f187,f188,f189,f190,f191,f192,f107,f111,f86,f177,f78,f110,f262,f263,f264,f267,f268,f250,f251,f252,f253,f254,f255,f256,f257,f258,f266,f269,f270,f271,f273,f274,f275,f127,f199,f128,f193,f196,f194,f195,f197,f80,f280,f281,f282,f284,f285,f286,f287&secid=1.600329&cb=jQuery112405506785612361488_1589457232614&_=1589457232640)
+Traceback (most recent call last):
+  File "D:\1\lib\site-packages\scrapy\utils\defer.py", line 102, in iter_errback
+    yield next(it)
+  File "D:\1\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "D:\1\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "D:\1\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "D:\1\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "E:\理财网\dongfang\dongfang\spiders\cdongfang.py", line 274, in gudong_parse
+    self.gupiao_name = gupiao_list.pop()
+IndexError: pop from empty list
+2020-06-10 20:46:24 [scrapy.core.engine] INFO: Closing spider (finished)
+2020-06-10 20:46:24 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 6347,
+ 'downloader/request_count': 11,
+ 'downloader/request_method_count/GET': 11,
+ 'downloader/response_bytes': 115597,
+ 'downloader/response_count': 11,
+ 'downloader/response_status_count/200': 11,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2020, 6, 10, 12, 46, 24, 650613),
+ 'log_count/ERROR': 1,
+ 'log_count/INFO': 9,
+ 'request_depth_max': 10,
+ 'response_received_count': 11,
+ 'scheduler/dequeued': 11,
+ 'scheduler/dequeued/memory': 11,
+ 'scheduler/enqueued': 11,
+ 'scheduler/enqueued/memory': 11,
+ 'spider_exceptions/IndexError': 1,
+ 'start_time': datetime.datetime(2020, 6, 10, 12, 46, 20, 594606)}
+2020-06-10 20:46:24 [scrapy.core.engine] INFO: Spider closed (finished)
+2020-06-10 20:46:41 [scrapy.utils.log] INFO: Scrapy 1.6.0 started (bot: dongfang)
+2020-06-10 20:46:41 [scrapy.utils.log] INFO: Versions: lxml 4.3.3.0, libxml2 2.9.5, cssselect 1.0.3, parsel 1.5.1, w3lib 1.20.0, Twisted 19.2.0, Python 3.6.6 (v3.6.6:4cf1f54eb7, Jun 27 2018, 03:37:03) [MSC v.1900 64 bit (AMD64)], pyOpenSSL 19.0.0 (OpenSSL 1.1.0i  14 Aug 2018), cryptography 2.3.1, Platform Windows-7-6.1.7601-SP1
+2020-06-10 20:46:41 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'dongfang', 'LOG_ENCODING': 'UTF-8', 'LOG_FILE': 'TEST1.LOG', 'LOG_LEVEL': 'INFO', 'NEWSPIDER_MODULE': 'dongfang.spiders', 'SPIDER_MODULES': ['dongfang.spiders']}
+2020-06-10 20:46:41 [scrapy.extensions.telnet] INFO: Telnet Password: 449da6cded6fdd81
+2020-06-10 20:46:41 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2020-06-10 20:46:41 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2020-06-10 20:46:41 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2020-06-10 20:46:41 [scrapy.middleware] INFO: Enabled item pipelines:
+[]
+2020-06-10 20:46:41 [scrapy.core.engine] INFO: Spider opened
+2020-06-10 20:46:41 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2020-06-10 20:46:41 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2020-06-10 20:46:48 [scrapy.core.scraper] ERROR: Spider error processing <GET http://f10.eastmoney.com/ShareholderResearch/ShareholderResearchAjax?code=SH600329> (referer: http://push2.eastmoney.com/api/qt/stock/get?ut=fa5fd1943c7b386f172d6893dbfba10b&invt=2&fltt=2&fields=f43,f57,f58,f169,f170,f46,f44,f51,f168,f47,f164,f163,f116,f60,f45,f52,f50,f48,f167,f117,f71,f161,f49,f530,f135,f136,f137,f138,f139,f141,f142,f144,f145,f147,f148,f140,f143,f146,f149,f55,f62,f162,f92,f173,f104,f105,f84,f85,f183,f184,f185,f186,f187,f188,f189,f190,f191,f192,f107,f111,f86,f177,f78,f110,f262,f263,f264,f267,f268,f250,f251,f252,f253,f254,f255,f256,f257,f258,f266,f269,f270,f271,f273,f274,f275,f127,f199,f128,f193,f196,f194,f195,f197,f80,f280,f281,f282,f284,f285,f286,f287&secid=1.600329&cb=jQuery112405506785612361488_1589457232614&_=1589457232640)
+Traceback (most recent call last):
+  File "D:\1\lib\site-packages\scrapy\utils\defer.py", line 102, in iter_errback
+    yield next(it)
+  File "D:\1\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "D:\1\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "D:\1\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "D:\1\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "E:\理财网\dongfang\dongfang\spiders\cdongfang.py", line 274, in gudong_parse
+    self.gupiao_name = gupiao_list.pop()
+IndexError: pop from empty list
+2020-06-10 20:46:48 [scrapy.core.engine] INFO: Closing spider (finished)
+2020-06-10 20:46:48 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 6347,
+ 'downloader/request_count': 11,
+ 'downloader/request_method_count/GET': 11,
+ 'downloader/response_bytes': 115591,
+ 'downloader/response_count': 11,
+ 'downloader/response_status_count/200': 11,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2020, 6, 10, 12, 46, 48, 581056),
+ 'log_count/ERROR': 1,
+ 'log_count/INFO': 9,
+ 'request_depth_max': 10,
+ 'response_received_count': 11,
+ 'scheduler/dequeued': 11,
+ 'scheduler/dequeued/memory': 11,
+ 'scheduler/enqueued': 11,
+ 'scheduler/enqueued/memory': 11,
+ 'spider_exceptions/IndexError': 1,
+ 'start_time': datetime.datetime(2020, 6, 10, 12, 46, 41, 514243)}
+2020-06-10 20:46:48 [scrapy.core.engine] INFO: Spider closed (finished)
+2020-06-10 20:47:45 [scrapy.utils.log] INFO: Scrapy 1.6.0 started (bot: dongfang)
+2020-06-10 20:47:45 [scrapy.utils.log] INFO: Versions: lxml 4.3.3.0, libxml2 2.9.5, cssselect 1.0.3, parsel 1.5.1, w3lib 1.20.0, Twisted 19.2.0, Python 3.6.6 (v3.6.6:4cf1f54eb7, Jun 27 2018, 03:37:03) [MSC v.1900 64 bit (AMD64)], pyOpenSSL 19.0.0 (OpenSSL 1.1.0i  14 Aug 2018), cryptography 2.3.1, Platform Windows-7-6.1.7601-SP1
+2020-06-10 20:47:45 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'dongfang', 'LOG_ENCODING': 'UTF-8', 'LOG_FILE': 'TEST1.LOG', 'LOG_LEVEL': 'INFO', 'NEWSPIDER_MODULE': 'dongfang.spiders', 'SPIDER_MODULES': ['dongfang.spiders']}
+2020-06-10 20:47:45 [scrapy.extensions.telnet] INFO: Telnet Password: b6a94df16c20e096
+2020-06-10 20:47:45 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2020-06-10 20:47:45 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2020-06-10 20:47:45 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2020-06-10 20:47:45 [scrapy.middleware] INFO: Enabled item pipelines:
+[]
+2020-06-10 20:47:45 [scrapy.core.engine] INFO: Spider opened
+2020-06-10 20:47:45 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2020-06-10 20:47:45 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2020-06-10 20:47:48 [scrapy.core.scraper] ERROR: Spider error processing <GET http://f10.eastmoney.com/ShareholderResearch/ShareholderResearchAjax?code=SH600329> (referer: http://push2.eastmoney.com/api/qt/stock/get?ut=fa5fd1943c7b386f172d6893dbfba10b&invt=2&fltt=2&fields=f43,f57,f58,f169,f170,f46,f44,f51,f168,f47,f164,f163,f116,f60,f45,f52,f50,f48,f167,f117,f71,f161,f49,f530,f135,f136,f137,f138,f139,f141,f142,f144,f145,f147,f148,f140,f143,f146,f149,f55,f62,f162,f92,f173,f104,f105,f84,f85,f183,f184,f185,f186,f187,f188,f189,f190,f191,f192,f107,f111,f86,f177,f78,f110,f262,f263,f264,f267,f268,f250,f251,f252,f253,f254,f255,f256,f257,f258,f266,f269,f270,f271,f273,f274,f275,f127,f199,f128,f193,f196,f194,f195,f197,f80,f280,f281,f282,f284,f285,f286,f287&secid=1.600329&cb=jQuery112405506785612361488_1589457232614&_=1589457232640)
+Traceback (most recent call last):
+  File "D:\1\lib\site-packages\scrapy\utils\defer.py", line 102, in iter_errback
+    yield next(it)
+  File "D:\1\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "D:\1\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "D:\1\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "D:\1\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "E:\理财网\dongfang\dongfang\spiders\cdongfang.py", line 274, in gudong_parse
+    self.gupiao_name = gupiao_list.pop()
+IndexError: pop from empty list
+2020-06-10 20:47:48 [scrapy.core.engine] INFO: Closing spider (finished)
+2020-06-10 20:47:48 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 6347,
+ 'downloader/request_count': 11,
+ 'downloader/request_method_count/GET': 11,
+ 'downloader/response_bytes': 115790,
+ 'downloader/response_count': 11,
+ 'downloader/response_status_count/200': 11,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2020, 6, 10, 12, 47, 48, 937562),
+ 'log_count/ERROR': 1,
+ 'log_count/INFO': 9,
+ 'request_depth_max': 10,
+ 'response_received_count': 11,
+ 'scheduler/dequeued': 11,
+ 'scheduler/dequeued/memory': 11,
+ 'scheduler/enqueued': 11,
+ 'scheduler/enqueued/memory': 11,
+ 'spider_exceptions/IndexError': 1,
+ 'start_time': datetime.datetime(2020, 6, 10, 12, 47, 45, 521156)}
+2020-06-10 20:47:48 [scrapy.core.engine] INFO: Spider closed (finished)
+2020-06-10 20:56:45 [scrapy.utils.log] INFO: Scrapy 1.6.0 started (bot: dongfang)
+2020-06-10 20:56:45 [scrapy.utils.log] INFO: Versions: lxml 4.3.3.0, libxml2 2.9.5, cssselect 1.0.3, parsel 1.5.1, w3lib 1.20.0, Twisted 19.2.0, Python 3.6.6 (v3.6.6:4cf1f54eb7, Jun 27 2018, 03:37:03) [MSC v.1900 64 bit (AMD64)], pyOpenSSL 19.0.0 (OpenSSL 1.1.0i  14 Aug 2018), cryptography 2.3.1, Platform Windows-7-6.1.7601-SP1
+2020-06-10 20:56:45 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'dongfang', 'LOG_ENCODING': 'UTF-8', 'LOG_FILE': 'TEST1.LOG', 'LOG_LEVEL': 'INFO', 'NEWSPIDER_MODULE': 'dongfang.spiders', 'SPIDER_MODULES': ['dongfang.spiders']}
+2020-06-10 20:56:45 [scrapy.extensions.telnet] INFO: Telnet Password: 53e1826a2ac1eb17
+2020-06-10 20:56:45 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2020-06-10 20:56:45 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2020-06-10 20:56:45 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2020-06-10 20:56:45 [scrapy.middleware] INFO: Enabled item pipelines:
+[]
+2020-06-10 20:56:45 [scrapy.core.engine] INFO: Spider opened
+2020-06-10 20:56:45 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2020-06-10 20:56:45 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2020-06-10 20:56:46 [scrapy.core.scraper] ERROR: Spider error processing <GET http://f10.eastmoney.com/ShareholderResearch/ShareholderResearchAjax?code=SZ002340> (referer: http://push2.eastmoney.com/api/qt/stock/get?ut=fa5fd1943c7b386f172d6893dbfba10b&invt=2&fltt=2&fields=f43,f57,f58,f169,f170,f46,f44,f51,f168,f47,f164,f163,f116,f60,f45,f52,f50,f48,f167,f117,f71,f161,f49,f530,f135,f136,f137,f138,f139,f141,f142,f144,f145,f147,f148,f140,f143,f146,f149,f55,f62,f162,f92,f173,f104,f105,f84,f85,f183,f184,f185,f186,f187,f188,f189,f190,f191,f192,f107,f111,f86,f177,f78,f110,f262,f263,f264,f267,f268,f250,f251,f252,f253,f254,f255,f256,f257,f258,f266,f269,f270,f271,f273,f274,f275,f127,f199,f128,f193,f196,f194,f195,f197,f80,f280,f281,f282,f284,f285,f286,f287&secid=0.002340&cb=jQuery112405506785612361488_1589457232614&_=1589457232640)
+Traceback (most recent call last):
+  File "D:\1\lib\site-packages\scrapy\utils\defer.py", line 102, in iter_errback
+    yield next(it)
+  File "D:\1\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "D:\1\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "D:\1\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "D:\1\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "E:\理财网\dongfang\dongfang\spiders\cdongfang.py", line 226, in gudong_parse
+    if '新' in i['zj'] or i['zj'].isdigital():
+AttributeError: 'str' object has no attribute 'isdigital'
+2020-06-10 20:56:46 [scrapy.core.engine] INFO: Closing spider (finished)
+2020-06-10 20:56:46 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 3297,
+ 'downloader/request_count': 6,
+ 'downloader/request_method_count/GET': 6,
+ 'downloader/response_bytes': 102483,
+ 'downloader/response_count': 6,
+ 'downloader/response_status_count/200': 6,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2020, 6, 10, 12, 56, 46, 787538),
+ 'log_count/ERROR': 1,
+ 'log_count/INFO': 9,
+ 'request_depth_max': 5,
+ 'response_received_count': 6,
+ 'scheduler/dequeued': 6,
+ 'scheduler/dequeued/memory': 6,
+ 'scheduler/enqueued': 6,
+ 'scheduler/enqueued/memory': 6,
+ 'spider_exceptions/AttributeError': 1,
+ 'start_time': datetime.datetime(2020, 6, 10, 12, 56, 45, 149535)}
+2020-06-10 20:56:46 [scrapy.core.engine] INFO: Spider closed (finished)
+2020-06-10 20:58:01 [scrapy.utils.log] INFO: Scrapy 1.6.0 started (bot: dongfang)
+2020-06-10 20:58:01 [scrapy.utils.log] INFO: Versions: lxml 4.3.3.0, libxml2 2.9.5, cssselect 1.0.3, parsel 1.5.1, w3lib 1.20.0, Twisted 19.2.0, Python 3.6.6 (v3.6.6:4cf1f54eb7, Jun 27 2018, 03:37:03) [MSC v.1900 64 bit (AMD64)], pyOpenSSL 19.0.0 (OpenSSL 1.1.0i  14 Aug 2018), cryptography 2.3.1, Platform Windows-7-6.1.7601-SP1
+2020-06-10 20:58:01 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'dongfang', 'LOG_ENCODING': 'UTF-8', 'LOG_FILE': 'TEST1.LOG', 'LOG_LEVEL': 'INFO', 'NEWSPIDER_MODULE': 'dongfang.spiders', 'SPIDER_MODULES': ['dongfang.spiders']}
+2020-06-10 20:58:01 [scrapy.extensions.telnet] INFO: Telnet Password: 96b778f5926cf033
+2020-06-10 20:58:01 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats']
+2020-06-10 20:58:01 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2020-06-10 20:58:01 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2020-06-10 20:58:01 [scrapy.middleware] INFO: Enabled item pipelines:
+[]
+2020-06-10 20:58:01 [scrapy.core.engine] INFO: Spider opened
+2020-06-10 20:58:01 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2020-06-10 20:58:01 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+2020-06-10 20:58:06 [scrapy.core.scraper] ERROR: Spider error processing <GET http://f10.eastmoney.com/ShareholderResearch/ShareholderResearchAjax?code=SZ002340> (referer: http://push2.eastmoney.com/api/qt/stock/get?ut=fa5fd1943c7b386f172d6893dbfba10b&invt=2&fltt=2&fields=f43,f57,f58,f169,f170,f46,f44,f51,f168,f47,f164,f163,f116,f60,f45,f52,f50,f48,f167,f117,f71,f161,f49,f530,f135,f136,f137,f138,f139,f141,f142,f144,f145,f147,f148,f140,f143,f146,f149,f55,f62,f162,f92,f173,f104,f105,f84,f85,f183,f184,f185,f186,f187,f188,f189,f190,f191,f192,f107,f111,f86,f177,f78,f110,f262,f263,f264,f267,f268,f250,f251,f252,f253,f254,f255,f256,f257,f258,f266,f269,f270,f271,f273,f274,f275,f127,f199,f128,f193,f196,f194,f195,f197,f80,f280,f281,f282,f284,f285,f286,f287&secid=0.002340&cb=jQuery112405506785612361488_1589457232614&_=1589457232640)
+Traceback (most recent call last):
+  File "D:\1\lib\site-packages\scrapy\utils\defer.py", line 102, in iter_errback
+    yield next(it)
+  File "D:\1\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "D:\1\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "D:\1\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "D:\1\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "E:\理财网\dongfang\dongfang\spiders\cdongfang.py", line 226, in gudong_parse
+    if '新' in i['zj'] or i['zj'].isdigital():
+AttributeError: 'str' object has no attribute 'isdigital'
+2020-06-10 20:58:06 [scrapy.core.engine] INFO: Closing spider (finished)
+2020-06-10 20:58:06 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 3297,
+ 'downloader/request_count': 6,
+ 'downloader/request_method_count/GET': 6,
+ 'downloader/response_bytes': 102386,
+ 'downloader/response_count': 6,
+ 'downloader/response_status_count/200': 6,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2020, 6, 10, 12, 58, 6, 847879),
+ 'log_count/ERROR': 1,
+ 'log_count/INFO': 9,
+ 'request_depth_max': 5,
+ 'response_received_count': 6,
+ 'scheduler/dequeued': 6,
+ 'scheduler/dequeued/memory': 6,
+ 'scheduler/enqueued': 6,
+ 'scheduler/enqueued/memory': 6,
+ 'spider_exceptions/AttributeError': 1,
+ 'start_time': datetime.datetime(2020, 6, 10, 12, 58, 1, 715470)}
+2020-06-10 20:58:06 [scrapy.core.engine] INFO: Spider closed (finished)
