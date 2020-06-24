@@ -74,6 +74,7 @@ class CdongfangSpider(scrapy.Spider):
     start_urls = strat_url
 
     def parse(self, response):
+        print('start...',response.url)
         id = re.findall('code=(\w+)',response.url)[0]
         column = sh.max_column + 2
         sh.cell(row=1, column=column - 1).value = id
@@ -203,5 +204,5 @@ class CdongfangSpider(scrapy.Spider):
             except:
                 row += 12
                 print('====================数据不全>>>',id_dict[id][0],'====================')
-
+        print('finish...')
         wb.save('a.xlsx')
